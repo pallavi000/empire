@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Empire Gold</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
+    <!-- Custom Stylesheet -->
+    <link href="./plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+     <!---Font Awsome-->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+   />
+   <script
+     src="https://kit.fontawesome.com/a076d05399.js"
+     crossorigin="anonymous"
+   ></script>
+   <script src="js/admin-registration-request.js"></script>
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <span class="brand-title">
+                        <img src="images/logo.png" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+          <div class="header-content clearfix">
+            <div class="header-left">
+              <ul class="clearfix">
+                <li style="padding-top: 25px">
+                  <span class="text-dark">Current Date & Time:</span>
+                  <span class="text-dark" id="date"></span>
+                </li>
+                
+                <li >
+                  <span class="text-dark">Gold Price Today (RM):</span>
+                  <span class="text-dark" id="priceGold"></span>
+                </li>
+              </ul>
+              <script>
+                n = new Date();
+                year = n.getFullYear();
+                month = n.getMonth() + 1;
+                date = n.getDate();
+                hour = n.getHours();
+                minutes = n.getMinutes();
+                seconds = n.getSeconds();
+                document.getElementById("date").innerHTML = n;
+              </script>
+            </div>
+            <div class="header-right">
+              <ul class="clearfix">
+                <li
+                  class="icons dropdown d-none d-md-flex"
+                  style="padding-right: 40px"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="log-user"
+                    data-toggle="dropdown"
+                  >
+                    <span>English</span>
+                    <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                  </a>
+                  <div
+                    class="
+                      drop-down
+                      dropdown-language
+                      animated
+                      fadeIn
+                      dropdown-menu
+                    "
+                  >
+                    <div class="dropdown-content-body">
+                      <ul>
+                        <li><a href="javascript:void()">English</a></li>
+                        <li><a href="javascript:void()">Dutch</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li style="padding-right: 40px" class="icons dropdown">
+                  <div
+                    class="user-img c-pointer position-relative"
+                    data-toggle="dropdown"
+                  >
+                    <!-- <img src="images/user/1.png" height="40" width="40" alt="" /> -->
+                    <span id="username" class="text-darker">SYAKINAHAMIDI</span>
+                  </div>
+                  <div
+                    class="
+                      drop-down
+                      dropdown-profile
+                      animated
+                      fadeIn
+                      dropdown-menu
+                    "
+                  >
+                    <div class="dropdown-content-body">
+                      <h5 style="padding-left: 10px" class="text-danger">
+                        Welcome!
+                      </h5>
+                      <ul>
+                        <li>
+                          <a href="app-profile.html"
+                            ><i class="icon-user"></i> <span>Profile</span></a
+                          >
+                        </li>
+                        <li>
+                          <a href="javascript:void()">
+                            <i class="icon-settings"></i>
+                            <span>Security Settings</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-lock.html"
+                            ><i class="icon-credit-card"></i>
+                            <span>Banking/Payment</span></a
+                          >
+                        </li>
+  
+                        <hr class="my-2" />
+  
+                        <li>
+                          <a href="page-login.html"
+                            ><i class="icon-key"></i> <span>Logout</span></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">
+          <div class="nk-nav-scroll">
+            <ul class="metismenu" id="menu">
+              <li class="nav-label">All Registration Request</li>
+              <li>
+                <a href="admin-homepage.html" aria-expanded="false">
+                  <i class="icon-speedometer menu-icon"></i
+                  ><span class="nav-text">Dashboard</span>
+                </a>
+              </li>
+              <li class="mega-menu mega-menu-sm">
+                <a
+                 
+                  href="admin_register_member.html"
+                  aria-expanded="false"
+                >
+                  <i class="icon-user menu-icon"></i
+                  ><span class="nav-text">Register</span>
+                </a>
+               
+              </li>
+              
+              <li>
+                <a
+                 
+                  href="admin-transaction-request.html"
+                  aria-expanded="false"
+                >
+                  <i class="icon-grid menu-icon"> </i
+                  ><span class="nav-text">Transaction Request</span>
+                </a>
+                
+              </li>
+              <li>
+                <a
+                 
+                  href="admin-registration-request.html"
+                  aria-expanded="false"
+                >
+                  <i class="icon-grid menu-icon"> </i
+                  ><span class="nav-text">Registration Request</span>
+                </a>
+                
+              </li>
+              <li>
+                <a
+                 
+                  href="admin_send_pins.html"
+                  aria-expanded="false"
+                >
+                  <i class="icon-grid menu-icon"> </i
+                  ><span class="nav-text">Send Pins</span>
+                </a>
+                
+              </li>
+              <li>
+                <a
+                 
+                  href="admin-all-transaction.html"
+                  aria-expanded="false"
+                >
+                  <i class="icon-grid menu-icon"> </i
+                  ><span class="nav-text">All Transaction</span>
+                </a>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Registration Request</h4>
+                                <input class="form-control" onkeyup="searchRegistrationRequest()" style="border-radius:15px;margin-bottom:10px;" type="text" id="searchRequest" placeholder="Search Request">
+                                <div class="table-responsive">
+                                    <table id="transactionRequest" class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>User Name</th>
+                                                <th>Full Name</th>
+                                                <th>Status</th>
+                                                <th>Date Request</th>
+                                                <th>
+                                                  Action
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+          <div class="copyright">
+            <p>Copyright &copy;2021 - Empire Gold - All Rights Reserved</p>
+          </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+
+    <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+    <script src="js/admin-registration-request.js"></script>
+
+</body>
+
+</html>

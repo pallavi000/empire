@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Empire Gold</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png" />
+    <!-- Pignose Calender -->
+    <link
+      href="./plugins/pg-calendar/css/pignose.calendar.min.css"
+      rel="stylesheet"
+    />
+    <!-- Chartist -->
+    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css" />
+    <link
+      rel="stylesheet"
+      href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css"
+    />
+    <!-- Custom Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!---Font Awsome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bank-details.js"></script>
+  
+  </head>
+
+  <body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+      <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+          <circle
+            class="path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke-width="3"
+            stroke-miterlimit="10"
+          />
+        </svg>
+      </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+      <!--**********************************
+            Nav header start
+        ***********************************-->
+      <div class="nav-header">
+        <div class="brand-logo">
+          <a href="homepage.html">
+            <!-- <b class="logo-abbr"><img src="images/logo.png" alt=""> </b> -->
+            <h4>Empire Gold</h4>
+            <span class="logo-compact">
+              <!-- <img src="./images/logo-compact.png" alt=""> -->
+              <h4>Empire Gold</h4>
+            </span>
+            <span class="brand-title">
+              <!-- <img src="images/logo-text.png" alt=""> -->
+            </span>
+          </a>
+        </div>
+      </div>
+      <!--**********************************
+            Nav header end
+        ***********************************-->
+
+      <!--**********************************
+            Header start
+        ***********************************-->
+      <div class="header">
+        <div class="header-content clearfix">
+          <div class="header-left">
+            <ul class="clearfix">
+              <li style="padding-top: 25px">
+                <span class="text-dark">Current Date & Time:</span>
+                <span class="text-dark" id="date"></span>
+              </li>
+              <li >
+                <span class="text-dark">Gold Price Today (RM):</span>
+                <span class="text-dark" id="priceGold"></span>
+              </li>
+            </ul>
+            <script>
+              n = new Date();
+              year = n.getFullYear();
+              month = n.getMonth() + 1;
+              date = n.getDate();
+              hour = n.getHours();
+              minutes = n.getMinutes();
+              seconds = n.getSeconds();
+              document.getElementById("date").innerHTML = n;
+            </script>
+          </div>
+          <div class="header-right">
+            <ul class="clearfix">
+              <li
+                class="icons dropdown d-none d-md-flex"
+                style="padding-right: 40px"
+              >
+                <a
+                  href="javascript:void(0)"
+                  class="log-user"
+                  data-toggle="dropdown"
+                >
+                  <span>English</span>
+                  <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                </a>
+                <div
+                  class="
+                    drop-down
+                    dropdown-language
+                    animated
+                    fadeIn
+                    dropdown-menu
+                  "
+                >
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <li><a href="javascript:void()">English</a></li>
+                      <li><a href="javascript:void()">Dutch</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li style="padding-right: 40px" class="icons dropdown">
+                <div
+                  class="user-img c-pointer position-relative"
+                  data-toggle="dropdown"
+                >
+                  <img src="images/user/1.png" height="40" width="40" alt="" />
+                  <span id="profileName" class="text-darker"></span>
+                </div>
+                <div
+                  class="
+                    drop-down
+                    dropdown-profile
+                    animated
+                    fadeIn
+                    dropdown-menu
+                  "
+                >
+                  <div class="dropdown-content-body">
+                    <h5 style="padding-left: 10px" class="text-danger">
+                      Welcome!
+                    </h5>
+                    <ul>
+                      <li>
+                        <a href="app-profile.html"
+                          ><i class="icon-user"></i> <span>Profile</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="account-setting.html">
+                          <i class="icon-settings"></i>
+                          <span>Security Settings</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page-lock.html"
+                          ><i class="icon-credit-card"></i>
+                          <span>Banking/Payment</span></a
+                        >
+                      </li>
+
+                      <hr class="my-2" />
+
+                      <li>
+                        <a href="page-login.html"
+                          ><i class="icon-key"></i> <span>Logout</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+      <!--**********************************
+            Sidebar start
+        ***********************************-->
+      <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+          <ul class="metismenu" id="menu">
+            <li class="nav-label">Dashboard</li>
+            <li>
+              <a href="homepage.html" aria-expanded="false">
+                <i class="icon-speedometer menu-icon"></i
+                ><span class="nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="mega-menu mega-menu-sm">
+              <a
+                class="has-arrow"
+                href="javascript:void()"
+                aria-expanded="false"
+              >
+                <i class="icon-user menu-icon"></i
+                ><span class="nav-text">Register/Upgrade</span>
+              </a>
+              <ul aria-expanded="false">
+                <li><a href="./new_member.html">New Register</a></li>
+                <li><a href="./member_reinvest.html">Reinvest</a></li>
+              </ul>
+            </li>
+            <li>
+              <a
+                class="has-arrow"
+                href="javascript:void()"
+                aria-expanded="false"
+              >
+                <i class="icon-wallet menu-icon"></i>
+                <span class="nav-text">Wallet</span>
+              </a>
+              <ul aria-expanded="false">
+                <li><a href="./eWallet.html">eWallet</a></li>
+                <li><a href="./personal_sales.html">Personal Sale</a></li>
+                <li><a href="./group_sales.html">Group Sale</a></li>
+                <li><a href="./pins.html">PINS</a></li>
+              </ul>
+            </li>
+            <li>
+              <a
+                class="has-arrow"
+                href="javascript:void()"
+                aria-expanded="false"
+              >
+                <i class="icon-grid menu-icon"> </i
+                ><span class="nav-text">Transaction</span>
+              </a>
+              <ul aria-expanded="false">
+                <li><a href="./send_pins.html">Send PINS</a></li>
+                <li>
+                  <a href="./send_ewallet_to_pins.html">Send eWallet to PINS</a>
+                </li>
+                <li><a href="withdraw.html">Withdraw</a></li>
+                <li>
+                  <a href="./withdrawal_history.html">Withdraw History</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                class="has-arrow"
+                href="javascript:void()"
+                aria-expanded="false"
+              >
+                <i class="icon-diamond menu-icon"></i>
+                <span class="nav-text">Plan</span>
+              </a>
+              <ul aria-expanded="false">
+                <li><a href="./member_reinvest.html">Reinvest</a></li>
+              </ul>
+            </li>
+            <li>
+              <a
+                class="has-arrow"
+                href="javascript:void()"
+                aria-expanded="false"
+              >
+                <i class="icon-present menu-icon"></i>
+                <span class="nav-text">Redeem Gold</span>
+              </a>
+              <ul aria-expanded="false">
+                <li><a href="./redeem gold.html">Redeem</a></li>
+              </ul>
+            </li>
+            <li>
+              <a
+                class="has-arrow"
+                href="javascript:void()"
+                aria-expanded="false"
+              >
+                <i class="icon-people menu-icon"></i
+                ><span class="nav-text">Network</span>
+              </a>
+              <ul aria-expanded="false">
+                <li><a href="./bonus_sponsor.html">Sponsor Tree</a></li>
+                <li><a href="./genealogy.html">Genealogy</a></li>
+              </ul>
+            </li>
+            <li>
+              <a
+                class="has-arrow"
+                href="javascript:void()"
+                aria-expanded="false"
+              >
+                <i class="icon-doc menu-icon"></i
+                ><span class="nav-text">Report</span>
+              </a>
+              <ul aria-expanded="false">
+                <li><a href="./bonus_sponsor.html">Bonus Sponsor</a></li>
+                <li><a href="./bonus_unilevel.html">Bonus Unilevel</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+      <!--**********************************
+            Content body start
+        ***********************************-->
+      <div class="content-body">
+        <div class="container-fluid mt-3">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="card">
+                <div class="card-body">
+                  <div class="basic-form">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label class="text-danger">Sponsor By</label>
+                        <input id="sponsorBy" type="text" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label class="text-danger">Refferal Link</label>
+                        <p id="refferal">https://empiregold.com/kina</p>
+                      </div>
+                      <div class="form-group">
+                        <div
+                          style="padding-top: 10px"
+                          class="col-12 text-center"
+                        >
+                          <button onclick="copyLink()" class="btn btn-danger">
+                            <i style="padding-right: 5px" class="fa fa-copy"></i
+                            >Copy Link
+                          </button>
+                          <script>
+                            function copyLink() {
+                              /* Get the text field */
+                              var copy = document.getElementById("refferal");
+
+                              console.log(copy.value);
+                              document.execCommand("copy");
+
+                              /* Copy the text inside the text field */
+                              navigator.clipboard.writeText(copy.value);
+
+                              /* Alert the copied text */
+                              alert("Copied to clipboard!");
+                            }
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title text-danger">Bank Information</h4>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Bank Name</label>
+                    <div class="col-sm-4">
+                      <input id="namaBank" type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Bank Branch</label>
+                      <div class="col-sm-4">
+                        <input id="bankBranch" type="text" class="form-control" />
+                      </div>
+                      <label class="col-sm-2 col-form-label">Bank SwiftCode</label>
+                      <div class="col-sm-4">
+                        <input id="bankSwiftCode" type="text" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label  class="col-sm-2 col-form-label">Holder Full Name</label>
+                      <div class="col-sm-4">
+                        <input id="fullName" type="text" class="form-control" />
+                      </div>
+                      <label class="col-sm-2 col-form-label">Account Number</label>
+                      <div class="col-sm-4">
+                        <input id="accNumber" type="text" class="form-control" />
+                      </div>
+                    </div>
+                    
+                    
+                    <button type="button" id="bankDetailSave" class="btn btn-dark">
+                      Save Details
+                    </button>
+                    <script>
+                    
+                      document
+                        .getElementById("bankDetailSave")
+                        .addEventListener("click", bankDetailUpdate);
+
+                        
+                    </script>
+                </div>
+              </div>
+            </div>
+
+           
+            <div class="col-md-5">
+              <div class="card card-widget">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img
+                      src="images/avatar/11.png"
+                      width="80"
+                      height="80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="row mb-5" style="margin-top: 10px">
+                    <div
+                      class="col text-center text-white"
+                      style="background-color: red; border-radius: 5px"
+                    >
+                      <span>Account Status: <span id="status"></span></span>
+                    </div>
+                  </div>
+                  <table class="table table-xs mb-0">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <i class="fa fa-user" style="padding-right: 10px"></i
+                          >Username
+                        </td>
+                        <td>
+                          <span id="p-name" class="text-center m-0 pl-3"></span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i
+                            class="fa fa-id-badge"
+                            style="padding-right: 10px"
+                          ></i
+                          >Full Name
+                        </td>
+                        <td>
+                          <span
+                            id="fullname"
+                            class="text-center m-0 pl-3"
+                          ></span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i
+                            class="fa fa-calendar"
+                            style="padding-right: 10px"
+                          ></i
+                          >Joined
+                        </td>
+                        <td>
+                          <span id="joinedDate" class="text-center m-0 pl-3"
+                            >2021-04-22 03:36:01</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i
+                            class="fa fa-calendar"
+                            style="padding-right: 10px"
+                          ></i
+                          >Reinvest Date
+                        </td>
+                        <td>
+                          <span id="reinvestDate" class="text-center m-0 pl-3"
+                            >2021-04-22 03:36:01</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i
+                            class="fa fa-calendar"
+                            style="padding-right: 10px"
+                          ></i
+                          >Reinvest
+                        </td>
+                        <td>
+                          <span id="reinvestTime" class="text-center m-0 pl-3"
+                            >1</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i
+                            class="fa fa-calendar"
+                            style="padding-right: 10px"
+                          ></i
+                          >Expired
+                        </td>
+                        <td>
+                          <span id="expiredDate" class="text-center m-0 pl-3"
+                            >2022-04-22 03:36:01</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i
+                            class="fa fa-diamond"
+                            style="padding-right: 10px"
+                          ></i
+                          >Package
+                        </td>
+                        <td>
+                          <span id="packageName" class="text-center m-0 pl-3"
+                            >Gold</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <i class="fa fa-money" style="padding-right: 10px"></i
+                          >Total Value
+                        </td>
+                        <td>
+                          <span class="text-center m-0 pl-3"
+                            >RM<span
+                              id="packageValue"
+                              class="text-center m-0 pl-3"
+                            ></span>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style="padding-top: 15px" class="col-12 text-center">
+                    <button class="btn btn-danger px-5">
+                      <i style="padding-right: 5px" class="fa fa-edit"></i
+                      >Profile
+                    </button>
+                  </div>
+                  <div style="padding-top: 10px" class="col-12 text-center">
+                    <button class="btn btn-danger px-5">
+                      <i style="padding-right: 5px" class="fa fa-lock"></i
+                      >Password
+                    </button>
+                  </div>
+
+                  <h6 style="padding-top: 10px" class="text-danger">
+                    Sponsor by:
+                  </h6>
+                  <p
+                    style="
+                      border: 1px solid #ced4da;
+                      padding-left: 20px;
+                      text-align: center;
+                    "
+                  >
+                    <i style="padding-right: 5px" class="icon-user-follow"></i
+                    >empiregold4
+                  </p>
+
+                  <h6 style="padding-top: 10px" class="text-danger">
+                    Refferal Link:
+                  </h6>
+                  <div>
+                    <p id="refferal">https://empiregold.com/kina</p>
+
+                    <div style="padding-top: 10px" class="col-12 text-center">
+                      <button onclick="copyLink()" class="btn btn-danger px-5">
+                        <i style="padding-right: 5px" class="fa fa-copy"></i
+                        >Copy Link
+                      </button>
+                      <script>
+                        function copyLink() {
+                          /* Get the text field */
+                          var copy = document.getElementById("refferal");
+
+                          console.log(copy.value);
+                          document.execCommand("copy");
+
+                          /* Copy the text inside the text field */
+                          navigator.clipboard.writeText(copy.value);
+
+                          /* Alert the copied text */
+                          alert("Copied to clipboard!");
+                        }
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- #/ container -->
+      </div>
+      <!--**********************************
+            Content body end
+        ***********************************-->
+
+      <!--**********************************
+            Footer start
+        ***********************************-->
+      <div class="footer">
+        <div class="copyright">
+          <p>Copyright &copy;2021 - Empire Gold - All Rights Reserved</p>
+        </div>
+      </div>
+      <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+
+    <!-- Chartjs -->
+    <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="./plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Datamap -->
+    <script src="./plugins/d3v3/index.js"></script>
+    <script src="./plugins/topojson/topojson.min.js"></script>
+    <script src="./plugins/datamaps/datamaps.world.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="./plugins/raphael/raphael.min.js"></script>
+    <script src="./plugins/morris/morris.min.js"></script>
+    <!-- Pignose Calender -->
+    <script src="./plugins/moment/moment.min.js"></script>
+    <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJS -->
+    <script src="./plugins/chartist/js/chartist.min.js"></script>
+    <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="./js/dashboard/dashboard-1.js"></script>
+    <script src="js/bank-details.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,98 @@
+[26-Nov-2021 23:28:24 UTC] PHP Warning:  include(/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin-register.php on line 2
+[26-Nov-2021 23:28:24 UTC] PHP Warning:  include(): Failed opening '/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin-register.php on line 2
+[26-Nov-2021 23:28:24 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin-register.php on line 21
+[26-Nov-2021 23:28:24 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin-register.php on line 25
+[26-Nov-2021 23:43:36 UTC] PHP Warning:  include(/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[26-Nov-2021 23:43:36 UTC] PHP Warning:  include(): Failed opening '/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin_register_member.php on line 297
+[26-Nov-2021 23:43:36 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin_register_member.php on line 299
+[26-Nov-2021 23:43:36 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/admin_register_member.php on line 302
+[26-Nov-2021 23:54:37 UTC] PHP Warning:  include(/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[26-Nov-2021 23:54:37 UTC] PHP Warning:  include(): Failed opening '/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin_register_member.php on line 297
+[26-Nov-2021 23:54:37 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin_register_member.php on line 299
+[26-Nov-2021 23:54:37 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/admin_register_member.php on line 302
+[26-Nov-2021 23:56:15 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[26-Nov-2021 23:56:15 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[26-Nov-2021 23:56:15 UTC] PHP Warning:  include(): Failed opening '../connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin_register_member.php on line 297
+[26-Nov-2021 23:56:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin_register_member.php on line 299
+[26-Nov-2021 23:56:15 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/admin_register_member.php on line 302
+[26-Nov-2021 23:59:32 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'empirego_uat'@'localhost' to database 'empiregold_uat' in /home/empirego/public_html/member/connection.php on line 7
+[26-Nov-2021 23:59:57 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin-register.php on line 2
+[26-Nov-2021 23:59:57 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin-register.php on line 2
+[26-Nov-2021 23:59:57 UTC] PHP Warning:  include(): Failed opening '../connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin-register.php on line 2
+[26-Nov-2021 23:59:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin-register.php on line 21
+[26-Nov-2021 23:59:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin-register.php on line 25
+[27-Nov-2021 00:00:14 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'empirego_uat'@'localhost' to database 'empiregold_uat' in /home/empirego/public_html/member/connection.php on line 7
+[27-Nov-2021 00:00:40 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin-register.php on line 2
+[27-Nov-2021 00:00:40 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin-register.php on line 2
+[27-Nov-2021 00:00:40 UTC] PHP Warning:  include(): Failed opening '../connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin-register.php on line 2
+[27-Nov-2021 00:00:40 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin-register.php on line 21
+[27-Nov-2021 00:00:40 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin-register.php on line 25
+[27-Nov-2021 00:01:45 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:01:45 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:01:45 UTC] PHP Warning:  include(): Failed opening '../connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:01:45 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin_register_member.php on line 299
+[27-Nov-2021 00:01:45 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/admin_register_member.php on line 302
+[27-Nov-2021 00:02:34 UTC] PHP Warning:  include(.../member/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:02:34 UTC] PHP Warning:  include(.../member/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:02:34 UTC] PHP Warning:  include(): Failed opening '.../member/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:02:34 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin_register_member.php on line 299
+[27-Nov-2021 00:02:34 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/admin_register_member.php on line 302
+[27-Nov-2021 00:17:26 UTC] PHP Warning:  include(/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:17:26 UTC] PHP Warning:  include(): Failed opening '/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:17:26 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/login.php on line 13
+[27-Nov-2021 00:17:26 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 14
+[27-Nov-2021 00:17:26 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 15
+[27-Nov-2021 00:17:30 UTC] PHP Warning:  include(/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:17:30 UTC] PHP Warning:  include(): Failed opening '/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:17:30 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/login.php on line 13
+[27-Nov-2021 00:17:30 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 14
+[27-Nov-2021 00:17:30 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 15
+[27-Nov-2021 00:17:39 UTC] PHP Warning:  include(/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:17:39 UTC] PHP Warning:  include(): Failed opening '/Users/syakinahamidi/Documents/EmpireGold-2/themes/quixlab/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:17:39 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/login.php on line 13
+[27-Nov-2021 00:17:39 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 14
+[27-Nov-2021 00:17:39 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 15
+[27-Nov-2021 00:18:13 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:18:13 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:18:13 UTC] PHP Warning:  include(): Failed opening '../connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:18:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/login.php on line 13
+[27-Nov-2021 00:18:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 14
+[27-Nov-2021 00:18:13 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 15
+[27-Nov-2021 00:20:10 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:20:10 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:20:10 UTC] PHP Warning:  include(): Failed opening '../connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:20:10 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/login.php on line 13
+[27-Nov-2021 00:20:10 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 14
+[27-Nov-2021 00:20:10 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 15
+[27-Nov-2021 00:20:50 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'empirego_uat'@'localhost' to database 'empiregold_uat' in /home/empirego/public_html/member/connection.php on line 7
+[27-Nov-2021 00:23:26 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:23:26 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:23:26 UTC] PHP Warning:  include(): Failed opening '../connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:23:26 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/login.php on line 13
+[27-Nov-2021 00:23:26 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 14
+[27-Nov-2021 00:23:26 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 15
+[27-Nov-2021 00:23:29 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:23:29 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:23:29 UTC] PHP Warning:  include(): Failed opening '../connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:23:29 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/login.php on line 13
+[27-Nov-2021 00:23:29 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 14
+[27-Nov-2021 00:23:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 15
+[27-Nov-2021 00:29:13 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:29:13 UTC] PHP Warning:  include(../connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:29:13 UTC] PHP Warning:  include(): Failed opening '../connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/login.php on line 2
+[27-Nov-2021 00:29:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/login.php on line 13
+[27-Nov-2021 00:29:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 14
+[27-Nov-2021 00:29:13 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/login.php on line 15
+[27-Nov-2021 00:31:00 UTC] PHP Warning:  include(.../member/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:31:00 UTC] PHP Warning:  include(.../member/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:31:00 UTC] PHP Warning:  include(): Failed opening '.../member/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:31:00 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin_register_member.php on line 299
+[27-Nov-2021 00:31:00 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/admin_register_member.php on line 302
+[27-Nov-2021 00:34:29 UTC] PHP Warning:  include(.../member/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:34:29 UTC] PHP Warning:  include(.../member/connection.php): failed to open stream: No such file or directory in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:34:29 UTC] PHP Warning:  include(): Failed opening '.../member/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/empirego/public_html/member/admin_register_member.php on line 297
+[27-Nov-2021 00:34:29 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/empirego/public_html/member/admin_register_member.php on line 299
+[27-Nov-2021 00:34:29 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/empirego/public_html/member/admin_register_member.php on line 302
+[27-Nov-2021 02:55:03 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'empirego_uat'@'localhost' (using password: NO) in /home/empirego/public_html/member/admin-register.php on line 20
+[27-Nov-2021 02:55:03 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/empirego/public_html/member/admin-register.php on line 24
+[27-Nov-2021 02:55:03 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/empirego/public_html/member/admin-register.php on line 28

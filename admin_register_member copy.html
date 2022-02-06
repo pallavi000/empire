@@ -1,0 +1,30 @@
+<form id="form">
+  <input type="file" name="background" id="fileUpload" />
+  <button type="submit" onclick="upload()">Upload</button>
+</form>
+
+<script>
+  // Select your input type file and store it in a variable
+
+  // This will upload the file after having read it
+  function upload() {
+    alert('masuk')
+    /* We get form and message elements */
+    const form = document.getElementById("fileUpload")
+
+    fetch("http://localhost:8066/enquiry/uploadMember", {
+      headers: {
+        "Content-Type": "multipart/form-data;boundary=----WebKitFormBoundaryQ0pBuvRC1EzDAQWT",
+      },
+      method: "POST",
+      body: form
+
+    }).then(function (response) {
+      return response.json()
+    })
+
+      .catch(function (error) {
+        // alert('Invalid Credential')
+        console.log(error);
+      });
+  }

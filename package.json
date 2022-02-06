@@ -1,0 +1,12 @@
+{
+  "name": "empiregold-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login-page.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
