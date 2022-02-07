@@ -1,43 +1,7 @@
 <?php
 include_once('user_auth.php');
+include './includes/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Empire Gold</title>
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
-    <!-- Custom Stylesheet -->
-    <link href="./plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-     <!-- Custom Stylesheet -->
-     <link href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
-     <!-- Page plugins css -->
-     <link href="./plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
-     <!-- Color picker plugins css -->
-     <link href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css" rel="stylesheet">
-     <!-- Date picker plugins css -->
-     <link href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
-     <!-- Daterange picker plugins css -->
-     <link href="./plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
-     <link href="./plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-      <!---Font Awsome-->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-  <script
-    src="https://kit.fontawesome.com/a076d05399.js"
-    crossorigin="anonymous"
-  ></script>
-  
-   
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- <script src="js/genealogy.js"></script> -->
 
 <style>
   /*Now the CSS*/
@@ -144,58 +108,10 @@ right connector from last child*/
 /*Thats all. I hope you enjoyed it.
 Thanks :)*/
 </style>
-</head>
 
-<body>
-
-    <!--*******************
-        Preloader start
-    ********************-->
-    <div id="preloader">
-        <div class="loader">
-            <svg class="circular" viewBox="25 25 50 50">
-                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
-            </svg>
-        </div>
-    </div>
-    <!--*******************
-        Preloader end
-    ********************-->
-
-    
-    <!--**********************************
-        Main wrapper start
-    ***********************************-->
-    <div id="main-wrapper">
-
-        <!--**********************************
-            Nav header start
-        ***********************************-->
-        <div class="nav-header">
-          <div class="brand-logo">
-            <a href="homepage.html">
-              <span class="brand-title">
-                <img src="images/logo.png" alt="">
-              </span>
-            </a>
-          </div>
-        </div>
-        <!--**********************************
-            Nav header end
-        ***********************************-->
-
-        <!--**********************************
-            Header start
-        ***********************************-->
-       
-        <!--**********************************
-            Header end ti-comment-alt
-        ***********************************-->
-
-        <!--**********************************
-            Sidebar start
-        ***********************************-->
         <?php include './includes/user-sidebar.php'; ?>
+            <link href="css/style.css" rel="stylesheet">
+
         <!--**********************************
             Sidebar end
         ***********************************-->
@@ -203,10 +119,11 @@ Thanks :)*/
         <!--**********************************
             Content body start
         ***********************************-->
-        <div class="content-body">
+        <div class="page-body pt-5">
           <div class="container-fluid">
             <div class="tree d-flex justify-content-center">
             <div class="col-lg-12">
+               
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Sponsor Tree</h4>
@@ -214,11 +131,11 @@ Thanks :)*/
                                 </p>
                                 <div id="accordion-three" class="accordion">
                                     <div class="card">
-                                        <div class="card-header">
+                                        <div class="card-header p-3">
                                             <h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse<?php echo $user['user_id'] ?>" aria-expanded="false" aria-controls="collapse<?php echo $user['user_id'] ?>"><i class="fa" aria-hidden="true"></i><?php echo $user['user_name'] ?></h5>
                                         </div>
                                         <div id="collapse<?php echo $user['user_id'] ?>" class="collapse" data-parent="#accordion-three">
-                                            <div class="card-body">
+                                            <div class="card-body p-3">
                                                 <?php echo sponsor_tree($user['user_id']); ?>
                                                 
                                             </div>
@@ -241,11 +158,7 @@ Thanks :)*/
         <!--**********************************
             Footer start
         ***********************************-->
-        <div class="footer">
-            <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
-            </div>
-        </div>
+       
         <!--**********************************
             Footer end
         ***********************************-->
@@ -270,6 +183,4 @@ Thanks :)*/
     <script
      src="js/genealogy.js"></script>
 
-</body>
-
-</html>
+<?php include './includes/footer.php' ?>

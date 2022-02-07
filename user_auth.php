@@ -44,11 +44,11 @@ if(!isset($_SESSION["username"])){
 			if($query->rowCount()>0) {
 				foreach ($all_users as $value) {
 					echo '<div class="card">
-						<div class="card-header">
+						<div class="card-header p-2">
 							<h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse'.$value["user_id"].'" aria-expanded="false" aria-controls="collapse'.$value["user_id"].'"><i class="fa" aria-hidden="true"></i> '.$value["user_name"].'</h5>
 						</div>
 						<div id="collapse'.$value["user_id"].'" class="collapse" data-parent="#collapse'.$value["genealogy_user_id"].'">
-							<div class="card-body">';
+							<div class="card-body p-2">';
 							child_loop($value['user_id']);
 						echo	'</div>
 						</div>
@@ -57,13 +57,14 @@ if(!isset($_SESSION["username"])){
 			}
 		}
 		
+		
 		foreach ($all_users as $value) {
 			echo '<div class="card">
-			<div class="card-header">
+			<div class="card-header p-2">
 				<h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse'.$value["user_id"].'" aria-expanded="false" aria-controls="collapse'.$value["user_id"].'"><i class="fa" aria-hidden="true"></i> '.$value["user_name"].'</h5>
 			</div>
 			<div id="collapse'.$value["user_id"].'" class="collapse" data-parent="#collapse'.$value["genealogy_user_id"].'">
-				<div class="card-body">';
+				<div class="card-body p-2">';
 				child_loop($value['user_id']);
 			echo	'</div>
 			</div>

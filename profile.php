@@ -65,6 +65,7 @@ include './includes/header.php';
 
             <div class="card">
               <div class="card-body">
+                
                 <form action="admin-query-updates.php" method="POST" class="form theme-form">
                   <h4 class="card-title text-danger">Particulars</h4>
                   <div class="form-group row">

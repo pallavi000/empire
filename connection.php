@@ -1,9 +1,8 @@
 <?php
  $host = "localhost";  
- $user = "u9620524_empirewp";  
- $password = 'Dylalee12@';  
- $db_name = "u9620524_empirephp";  
-   
+ $user = "root";  
+ $password = '';  
+ $db_name = "empire";  
    
 
  $db = null;
