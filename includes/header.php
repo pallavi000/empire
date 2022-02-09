@@ -51,10 +51,11 @@
 
 </head>
 
-<body>
+<body >
   <!-- Loader starts-->
   <div class="loader-wrapper">
     <div class="typewriter">
       <h1>Empire Gold Loading...</h1>
     </div>
   </div>
+ <div class="mobile-padding"></div>

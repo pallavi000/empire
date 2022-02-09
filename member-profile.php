@@ -61,20 +61,20 @@ include './includes/header.php'
                 <form action="member-query-updates.php" class="form theme-form" method="POST">
                   <h4 class="card-title text-danger">Particulars</h4>
                   <div class="form-group row">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class=" col-form-label">National/Passport ID</label>
                       <input type="text" class="form-control" />
                     </div>
-                    <div class="col"></div>
+                    <div class="col-md-6 col-sm-12"></div>
                   </div>
                   <div class="form-group row">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class="col-form-label">Full Name</label>
 
                       <input type="text" class="form-control" name="fullName" value="<?php echo $user['full_name'] ?>"
                         required />
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class="col-form-label">Email Address</label>
 
                       <input type="email" name="email" class="form-control" value="<?php echo $user['EMAIL'] ?>"
@@ -82,13 +82,13 @@ include './includes/header.php'
                     </div>
                   </div>
                   <div class="form-group row">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class=" col-form-label">Address Street</label>
 
                       <textarea class="form-control h-150px" rows="6" id="comment" name="address"
                         required><?php echo $user['address_no']; ?></textarea>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class=" col-form-label">City</label>
 
                       <input type="text" name="city" class="form-control" value="<?php echo $user['city'] ?>"
@@ -96,13 +96,13 @@ include './includes/header.php'
                     </div>
                   </div>
                   <div class="form-group row">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class=" col-form-label">State</label>
 
                       <input type="text" name="state" class="form-control" value="<?php echo $user['state'] ?>"
                         required />
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class="col-form-label">Country</label>
 
                       <select id="inputState" class="form-control" name="inputCountry" required>
@@ -113,13 +113,13 @@ include './includes/header.php'
                     </div>
                   </div>
                   <div class="form-group row">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class="col-form-label">Postcode</label>
 
                       <input type="text" name="postcode" class="form-control" value="<?php echo $user['postcode'] ?>"
                         required />
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class="col-form-label">Mobile Phone</label>
 
                       <input type="text" name="phone" class="form-control" value="<?php echo $user['tel_no'] ?>"
@@ -127,13 +127,13 @@ include './includes/header.php'
                     </div>
                   </div>
                   <div class="form-group row">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class="col-form-label">Bank Name</label>
 
                       <input type="text" name="bank_name" class="form-control"
                         value="<?php echo $user['bank_name'] ?>" />
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                       <label class="col-form-label">Bank Account Number</label>
 
                       <input type="text" name="bank_acc_number" class="form-control"

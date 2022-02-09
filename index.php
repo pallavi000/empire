@@ -66,7 +66,7 @@ if(isset($_SESSION['username'])) {
                 <div class="card-body p-0">
                   <div class="cont text-center">
                     <div>
-                      <form class="theme-form" action="login.php" method="post">
+                      <form class="form theme-form mx-auto" action="login.php" method="post">
                         <h4>LOGIN</h4>
                         <h6>Enter your Username and Password</h6>
                         <div class="form-group">
@@ -84,91 +84,11 @@ if(isset($_SESSION['username'])) {
                         <div class="form-group form-row mt-3 mb-0">
                           <button class="btn btn-primary btn-block" type="submit">LOGIN</button>
                         </div>
-                        <div class="login-divider"></div>
-                        <div class="social mt-3">
-                          <div class="form-row btn-showcase">
-                            <div class="col-md-4 col-sm-6">
-                              <button class="btn social-btn btn-fb">Facebook</button>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                              <button class="btn social-btn btn-twitter">Twitter</button>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                              <button class="btn social-btn btn-google">Google + </button>
-                            </div>
-                          </div>
-                        </div>
+
+
                       </form>
                     </div>
-                    <div class="sub-cont">
-                      <div class="img">
-                        <div class="img__text m--up">
-                          <h2>New here?</h2>
-                          <p>Sign up and discover great amount of new opportunities!</p>
-                        </div>
-                        <div class="img__text m--in">
-                          <h2>One of us?</h2>
-                          <p>If you already has an account, just sign in. We've missed you!</p>
-                        </div>
-                        <div class="img__btn"><span class="m--up">Sign up</span><span class="m--in">Sign in</span></div>
-                      </div>
-                      <div>
-                        <form class="theme-form" method="post" action="">
-                          <h4 class="text-center">NEW USER</h4>
-                          <h6 class="text-center">Enter your Username and Password For Signup</h6>
-                          <div class="form-row">
-                            <div class="col-md-12">
-                              <div class="form-group">
-                                <input class="form-control" type="text" name="refferal" placeholder="Refferal Detail">
-                              </div>
-                            </div>
-                            <div class="col-md-12">
-                              <div class="form-group">
-                                <input class="form-control" type="text" name="fullname" placeholder="Full Name">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <input class="form-control" type="email" name="email" placeholder="Email">
-                          </div>
-                          <div class="form-group">
-                            <input class="form-control" type="text" name="phone" placeholder="Mobile Phone">
-                          </div>
 
-                          <div class="form-group">
-                            <input class="form-control" type="text" name="username" placeholder="Username">
-                          </div>
-
-
-                          <div class="form-group">
-                            <input class="form-control" type="password" placeholder="Password">
-                          </div>
-                          <div class="form-row">
-                            <div class="col-sm-4">
-                              <button class="btn btn-primary" type="submit">Sign Up</button>
-                            </div>
-                            <div class="col-sm-8">
-                              <div class="text-left mt-2 m-l-20">Are you already user?  <a
-                                  class="btn-link text-capitalize" href="index.php">Login</a></div>
-                            </div>
-                          </div>
-                          <div class="form-divider"></div>
-                          <div class="social mt-3">
-                            <div class="form-row btn-showcase">
-                              <div class="col-sm-4">
-                                <button class="btn social-btn btn-fb">Facebook</button>
-                              </div>
-                              <div class="col-sm-4">
-                                <button class="btn social-btn btn-twitter">Twitter</button>
-                              </div>
-                              <div class="col-sm-4">
-                                <button class="btn social-btn btn-google">Google +</button>
-                              </div>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

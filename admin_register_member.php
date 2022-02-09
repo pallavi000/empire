@@ -166,14 +166,14 @@ include('./admin_auth.php');
             </div>
             <div class="card-body">
               <div class="form-group row">
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class="col-form-label">Username</label>
 
                   <input id="username2" name="username" type="text" class="form-control" onblur="checkUsername()"
                     required="required" />
                   <label id="checkingUsername"></label>
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class=" col-form-label">Password</label>
                   <input id="password" name="password" type="password" class="form-control" onfocus="checkPassword()"
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required="required" />
@@ -204,41 +204,41 @@ include('./admin_auth.php');
             </div>
             <div class="card-body">
               <div class="form-group row">
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class="col-form-label">National/Passport ID</label>
                   <input id="nationalID" type="text" class="form-control" required="required" />
                 </div>
-                <div class="col"></div>
+                <div class="col-md-6 col-sm-12"></div>
               </div>
               <div class="form-group row">
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class=" col-form-label">Full Name</label>
 
                   <input id="fullName" name="fullName" type="text" class="form-control" required="required" />
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class="col-form-label">Email Address</label>
                   <input id="email" name="email" type="text" class="form-control" required="required" />
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class=" col-form-label">Address Street</label>
                   <textarea class="form-control h-150px" rows="6" name="address" id="address"
                     required="required"></textarea>
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class=" col-form-label">City</label>
                   <input id="city" name="city" type="text" class="form-control" required="required" />
                 </div>
               </div>
 
               <div class="form-group row">
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class=" col-form-label">State</label>
                   <input id="state" name="state" type="text" class="form-control" required="required" />
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class="col-form-label">Country</label>
                   <select id="inputCountry" name="inputCountry" class="form-control">
                     <option selected="selected">Malaysia</option>
@@ -248,23 +248,23 @@ include('./admin_auth.php');
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class="col-form-label">Postcode</label>
 
                   <input id="postcode" name="postcode" type="text" class="form-control" required="required" />
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class=" col-form-label">Mobile Phone</label>
 
                   <input id="phone" name="phone" type="text" class="form-control" required="required" />
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class="col-form-label">Secret Key</label>
                   <input id="secretkey" name="secretkey" type="text" class="form-control" />
                 </div>
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                   <label class="col-form-label">Join Date</label>
                   <input id="joinDate" name="joinDate" type="date" class="form-control" required="required" />
                 </div>

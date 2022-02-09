@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 text-center footer-copyright">
-          <p class="mb-0">Copyright © 2021 Poco. All rights reserved.</p>
+          <p class="mb-0">Copyright &copy;2022 - Empire Gold - All Rights Reserved<br>Powered by <a href="https://udexmedia.com">UDEX MEDIA</a></p>
         </div>
         
       </div>

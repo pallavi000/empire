@@ -7,3 +7,70 @@ html{scroll-behavior:smooth}body{background-color:rgba(246,246,246,0.6);font-siz
 .page-wrapper .page-body-wrapper .iconsidebar-menu .iconMenu-bar{
     width:110px !important;
 }
+.form-control[readonly]:active, .form-control[readonly]:focus{
+border: none !important;
+outline: none !important;
+box-shadow: none !important;
+}
+
+input[type="date"]::-webkit-datetime-edit, input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-clear-button {
+  color: #fff;
+  position: relative;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field{
+  position: absolute !important;
+  border-left:1px solid #8c8c8c;
+  padding: 2px;
+  color:#000;
+  left: 56px;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field{
+  position: absolute !important;
+  border-left:1px solid #8c8c8c;
+  padding: 2px;
+  color:#000;
+  left: 26px;
+}
+
+
+input[type="date"]::-webkit-datetime-edit-day-field{
+  position: absolute !important;
+  color:#000;
+  padding: 2px;
+  left: 4px;
+  
+}
+@media only screen and (max-width:575px){
+.page-wrapper .page-body-wrapper .page-body{
+  padding-top: 50px !important;
+}
+}
+@media only screen and (max-width:991px){
+  .mobile-padding{
+    /* padding-top: 50px; */
+  }
+
+  .customizer-links{
+    display: block !important;
+    width: 20px;
+  }
+
+  .page-wrapper .page-body-wrapper .page-body{
+        padding-top: 50px !important;
+  }
+}
+
+
+footer{
+  background-color: transparent!important;
+}
+
+.customizer-links #c-pills-home-tab{
+      background-color: #5e44c6 !important;
+}
+
+.customizer-links #c-pills-profile-tab{
+      background-color: #8b4bdc !important;
+}
