@@ -8,7 +8,8 @@ if(isset($_POST['gold_price']) && isset($_POST['gold_id'])) {
     $gold_id = $_POST['gold_id'];
     $query = $db->prepare("UPDATE gold_update SET gold_price=? WHERE gold_id=?");
     $query->execute([$gold_price, $gold_id]);
-    echo '<script>alert("Gold Price Update.")</script>';
+    $_SESSION['success'] = "Gold Price Update.";
+    // echo '<script>alert("Gold Price Update.")</script>';
     echo "<script> location.href='admin-homepage.php'; </script>";
 } elseif(isset($_POST['action']) && $_POST['action']=="profile_update") {
 
@@ -23,18 +24,21 @@ if(isset($_POST['gold_price']) && isset($_POST['gold_id'])) {
     $country=$_POST['inputCountry'];
     $query = $db->prepare("UPDATE USER_TABLE SET email=?, tel_no=?, full_name=?, address_no=?, city=?, state=?, postcode=?, country=?  WHERE user_name=?");
     $query->execute([$email, $phone, $full_name, $address_no, $city, $state, $postcode, $country, $_SESSION['admin_username']]);
-    echo '<script>alert("Record Updated.")</script>';
+        $_SESSION['success'] = "Record Updated.";
+    // echo '<script>alert("Record Updated.")</script>';
     echo "<script> location.href='profile.php'; </script>";
 } elseif(isset($_POST['action']) && $_POST['action']=="password_update") {
     $password = $_POST['newPassword'];
     $confirm = $_POST['confirmNewPassword'];
     if($password!=$confirm) {
-        echo '<script>alert("Password and Confirm Password Did Not Match.")</script>';
+        $_SESSION['error'] = "Password and Confirm Password Did Not Match.";
+        // echo '<script>alert("Password and Confirm Password Did Not Match.")</script>';
         echo "<script> location.href='account-setting.php'; </script>";
     } else {
         $query = $db->prepare("UPDATE USER_TABLE SET PASSWORD=? WHERE user_name=?");
         $query->execute([$password, $_SESSION['admin_username']]);
-        echo '<script>alert("Password Updated.")</script>';
+         $_SESSION['success'] = "Password Updated.";
+        // echo '<script>alert("Password Updated.")</script>';
         echo "<script> location.href='account-setting.php'; </script>";
     }
 } elseif(isset($_GET['approve']) && isset($_GET['id'])) {
@@ -113,12 +117,13 @@ if(isset($_POST['gold_price']) && isset($_POST['gold_id'])) {
 
     $query = $db->prepare("UPDATE USER_TABLE SET user_status=? WHERE user_id=?");
     $query->execute([$user_status, $_GET['id']]);
-
-    echo '<script>alert("Request Updated.")</script>';
+    $_SESSION['success'] = "Request Updated.";
+    // echo '<script>alert("Request Updated.")</script>';
     echo "<script> location.href='admin-registration-request.php'; </script>";
 } elseif(isset($_POST['action']) && $_POST['action']=="send_pins") {
     if($_POST['amount']>$_POST['pin_balance']) {
-        echo '<script>alert("You do not have enough pin balance.")</script>';
+         $_SESSION['error'] = "You do not have enough pin balance.";
+        // echo '<script>alert("You do not have enough pin balance.")</script>';
         echo "<script> location.href='admin_send_pins.php'; </script>";
     } else {
         $reduce_pin_value = $_POST['pin_balance']-$_POST['amount'];
@@ -151,7 +156,8 @@ if(isset($_POST['gold_price']) && isset($_POST['gold_id'])) {
         $balance = $add_pin_value;
         $query = $db->prepare("INSERT INTO TRANSACTIONAL_DETAIL (`USER_ID`, `AMOUNT`, `CREATED_DATE`, `PERCENTAGE`, `STATUS`, `details`, `balance`, `type`, `Level`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $query->execute([$user_id, $_POST['amount'], $created_at, 12, $status, $details, $balance, $type, NULL]);
-        echo '<script>alert("Amount Transferee Successfully.")</script>';
+        // echo '<script>alert("Amount Transferee Successfully.")</script>';
+        $_SESSION['success'] = "Amount Transferee Successfully." ;
         echo "<script> location.href='admin_send_pins.php'; </script>";
     }
 } elseif(isset($_POST['action']) && $_POST['action']=="trans_approve") {
@@ -191,7 +197,8 @@ if(isset($_POST['gold_price']) && isset($_POST['gold_id'])) {
 
             if($_POST['fee']=="5.00") {
                 if($wallet['WALLET_BALANCE']<5) {
-                    echo '<script>alert("User do not have enough balance for fee.")</script>';
+                    $_SESSION['error'] = "User do not have enough balance for fee." ;
+                    // echo '<script>alert("User do not have enough balance for fee.")</script>';
                     echo "<script> location.href='".$_SERVER['HTTP_REFERER']."'; </script>";
                     exit;
                 } else {
@@ -201,7 +208,8 @@ if(isset($_POST['gold_price']) && isset($_POST['gold_id'])) {
                 $fee = ($row['AMOUNT']*5)/100;
                 $fee = round($fee, 2);
                 if($wallet['WALLET_BALANCE']<$fee) {
-                    echo '<script>alert("User do not have enough balance for fee.")</script>';
+                 $_SESSION['error'] = "User do not have enough balance for fee.";
+                    // echo '<script>alert("User do not have enough balance for fee.")</script>';
                     echo "<script> location.href='".$_SERVER['HTTP_REFERER']."'; </script>";
                     exit;
                 }
@@ -209,7 +217,8 @@ if(isset($_POST['gold_price']) && isset($_POST['gold_id'])) {
                 $fee = ($row['AMOUNT']*3)/100;
                 $fee = round($fee, 2);
                 if($wallet['WALLET_BALANCE']<$fee) {
-                    echo '<script>alert("User do not have enough balance for fee.")</script>';
+                     $_SESSION['error'] = "User do not have enough balance for fee.";
+                    // echo '<script>alert("User do not have enough balance for fee.")</script>';
                     echo "<script> location.href='".$_SERVER['HTTP_REFERER']."'; </script>";
                     exit;
                 }
@@ -361,7 +370,8 @@ if(isset($_POST['gold_price']) && isset($_POST['gold_id'])) {
         }
         
     }
-    echo '<script>alert("Transaction Status Updated.")</script>';
+     $_SESSION['success'] = "Transaction Status Updated.";
+    // echo '<script>alert("Transaction Status Updated.")</script>';
     echo "<script> location.href='admin-transaction-request.php'; </script>";
 
 } elseif(isset($_POST['action']) && $_POST['action']=="reload_pin") {
@@ -371,7 +381,8 @@ if(isset($_POST['gold_price']) && isset($_POST['gold_id'])) {
     $new_pin_value = $wallet['PIN_VALUE']+$_POST['pin_value'];
     $query = $db->prepare("UPDATE WALLET SET PIN_VALUE=? WHERE USER_ID=?");
     $query->execute([$new_pin_value, $user['user_id']]);
-    echo '<script>alert("Reload Pin Successful.")</script>';
+    $_SESSION['success'] = "Reload Pin Successful.";
+    // echo '<script>alert("Reload Pin Successful.")</script>';
     echo "<script> location.href='admin-homepage.php'; </script>";
 }
 

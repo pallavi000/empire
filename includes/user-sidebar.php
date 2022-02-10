@@ -17,18 +17,18 @@
       <div class="nav-right col pull-right right-menu">
         <ul class="nav-menus">
           <li>
-            <span class="text-dark ">Current Date & Time:</span>
-            <span class="text-dark " id="date"></span>
+            <span class=" ">Current Date & Time:</span>
+            <span class=" " id="date"></span>
           </li>
 
           <li>
-            <span class="text-dark">Gold Price Today (RM):</span>
+            <span class="">Gold Price Today (RM):</span>
             <?php
               $gold = $db->prepare("SELECT * from gold_update");
               $gold->execute([]);
               $gold = $gold->fetch();
               ?>
-            <span class="text-dark" id="priceGold">
+            <span class="" id="priceGold">
               <?php echo $gold['gold_price'] ?>
             </span>
           </li>

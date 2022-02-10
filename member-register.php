@@ -24,6 +24,7 @@
     $package = $package->fetch();
 
     if($package['PACKAGES_PRICE']>$wallet['PIN_VALUE']) {
+     $_SESSION['error'] = "You do not have enough pins.";
         echo '<script>alert("You do not have enough pins.")</script>';
         echo "<script> location.href='new-member.php'; </script>";
         exit;
@@ -68,9 +69,11 @@
     //     // $count = mysqli_num_rows($result);  
           
         if($query){
-            echo '<script>alert("Records added successfully.")</script>';
+            $_SESSION['success'] = "Records added successfully.";
+            // echo '<script>alert("Records added successfully.")</script>';
         } else{
-            echo '<script>alert("ERROR: Could not able to execute.")</script>';
+               $_SESSION['error'] = "Could not able to execute.";
+            // echo '<script>alert("ERROR: Could not able to execute.")</script>';
         }
         echo "<script> location.href='new-member.php'; </script>";
 ?>  

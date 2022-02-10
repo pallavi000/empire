@@ -52,9 +52,14 @@
     //     // $count = mysqli_num_rows($result);  
           
         if($query){
-            echo '<script>alert("Records added successfully.")</script>';
+                     $_SESSION['success'] = "Records added successfully.";
+            // echo '<script>alert("Records added successfully.")</script>';
         } else{
-            echo '<script>alert("ERROR: Could not able to execute.")</script>';
+            // echo '<script>alert("ERROR: Could not able to execute.")</script>';
+            $_SESSION['error'] = "Could not able to execute.";
+
         }
+        
+        
         echo "<script> location.href='admin_register_member.php'; </script>";
 ?>  

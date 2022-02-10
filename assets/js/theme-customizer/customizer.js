@@ -164,6 +164,11 @@ $(document).ready(function() {
         $(this).addClass("active");
         var mixLayout = $(this).attr("data-attr");
         $("body").attr("class", mixLayout);
+        if(mixLayout=="dark-only") {
+          localStorage.setItem('dark', mixLayout)
+        } else {
+          localStorage.removeItem('dark')
+        }
     });
 
 

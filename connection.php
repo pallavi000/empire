@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";  
- $user = "u9620524_empirewp";  
- $password = 'Dylalee12@';  
- $db_name = "u9620524_empirephp"; 
+ $host = "localhost";  
+ $user = "root";  
+ $password = '';  
+ $db_name = "empire";  
    
 
  $db = null;
@@ -18,6 +18,4 @@ $host = "localhost";
      die("Failed to connect with MySQL: ". mysqli_connect_error());  
  }
 
-
- 
 ?>

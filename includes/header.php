@@ -38,6 +38,8 @@
     <link id="color" rel="stylesheet" href="assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+
    
 
 
@@ -47,7 +49,28 @@
 
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></link>
 
+ <script>
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": true,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": true,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    }
+  </script>
 
 </head>
 
@@ -59,3 +82,15 @@
     </div>
   </div>
  <div class="mobile-padding"></div>
+
+ <?php
+ if(isset($_SESSION['success'])){
+   echo '<script> toastr.success("'.$_SESSION['success'].'")</script>';
+   unset($_SESSION['success']);
+ }
+
+  if(isset($_SESSION['error'])){
+   echo '<script> toastr.error("'.$_SESSION['error'].'")</script>';
+   unset($_SESSION['error']);
+ }
+ ?>

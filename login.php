@@ -6,7 +6,7 @@
     $password = $_POST['pass'];
     $password = trim(htmlentities(strip_tags($password)));
 
-      
+    
         // //to prevent from mysqli injection  
         // $username = stripcslashes($username);  
         // $password = stripcslashes($password);  
@@ -19,20 +19,24 @@
         if($count == 1) {
             $row = $sql->fetch();
             if($row["user_status"]=="ACTIVE") {
-                echo '<script>alert("Login successful")</script>'; 
+                // echo '<script>alert("Login successful")</script>'; 
                 if($row['user_type']==="AD") {
                     $_SESSION['admin_username'] = $username;
-                    echo "<script> location.href='admin_register_member.php'; </script>";
+                    $_SESSION['success'] = "Login Success!";
+                    echo "<script> location.href='admin-homepage.php'; </script>";
                 } else {
                     $_SESSION['username'] = $username;
+                    $_SESSION['success'] = 'Login Success';
                     echo "<script> location.href='homepage.php'; </script>";
                 }
             } else {
-                echo '<script>alert("Your account is not active yet. Account Status: '.$row["user_status"].'")</script>'; 
+                $_SESSION['error'] = "Your account is not active yet. Account Status: ".$row["user_status"];
+                // echo '<script>alert("Your account is not active yet. Account Status: '.$row["user_status"].'")</script>'; 
                 echo "<script> location.href='index.php'; </script>";
             }
         } else {
-            echo '<script>alert("Login failed. Invalid username or password.")</script>'; 
+            $_SESSION['error'] = "Login failed. Invalid username or password.";
+           // echo '<script>alert("Login failed. Invalid username or password.")</script>'; 
             echo "<script> location.href='index.php'; </script>";
         }
       

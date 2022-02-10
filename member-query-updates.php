@@ -19,18 +19,21 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
     $bank_acc_num = $_POST['bank_acc_number'];
     $query = $db->prepare("UPDATE USER_TABLE SET email=?, tel_no=?, full_name=?, address_no=?, city=?, state=?, postcode=?, country=?, bank_name=?, bank_acc_num=?  WHERE user_name=?");
     $query->execute([$email, $phone, $full_name, $address_no, $city, $state, $postcode, $country, $bank_name, $bank_acc_num, $_SESSION['username']]);
-    echo '<script>alert("Record Updated.")</script>';
+    $_SESSION['success'] = "Record Updated.";
+    // echo '<script>alert("Record Updated.")</script>';
     echo "<script> location.href='member-profile.php'; </script>";
 } elseif(isset($_POST['action']) && $_POST['action']=="password_update") {
     $password = $_POST['newPassword'];
     $confirm = $_POST['confirmNewPassword'];
     if($password!=$confirm) {
-        echo '<script>alert("Password and Confirm Password Did Not Match.")</script>';
+         $_SESSION['error'] = "Password and Confirm Password Did Not Match.";
+        // echo '<script>alert("Password and Confirm Password Did Not Match.")</script>';
         echo "<script> location.href='member-account-setting.php'; </script>";
     } else {
         $query = $db->prepare("UPDATE USER_TABLE SET PASSWORD=? WHERE user_name=?");
         $query->execute([$password, $_SESSION['username']]);
-        echo '<script>alert("Password Updated.")</script>';
+         $_SESSION['success'] = "Password Updated.";
+        // echo '<script>alert("Password Updated.")</script>';
         echo "<script> location.href='member-account-setting.php'; </script>";
     }
 } elseif(isset($data['action']) && $data['action']=="reinvest_init") {
@@ -53,7 +56,8 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
     $upgrade_package = $upgrade_package->fetch();
 
     if($_POST['pin_value']<$upgrade_package['PACKAGES_PRICE']) {
-        echo '<script>alert("You do not have enough pins.")</script>';
+         $_SESSION['error'] ="You do not have enough pins." ;
+        // echo '<script>alert("You do not have enough pins.")</script>';
         echo "<script> location.href='member_reinvest.php'; </script>";
     } else {
         $member = $db->prepare("SELECT * from USER_TABLE WHERE user_id=?");
@@ -81,14 +85,15 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
 
         $reinvest = $db->prepare("INSERT into reinvest (user_id, sponser_id, package_id, reinvest_date) VALUES (?, ?, ?, ?)");
         $reinvest->execute([$_POST['member'], $user['user_id'], $_POST['package'], $today]);
-        
-        echo '<script>alert("Reinvest Successful.")</script>';
+         $_SESSION['success'] = "Reinvest Successful.";
+        // echo '<script>alert("Reinvest Successful.")</script>';
         echo "<script> location.href='member_reinvest.php'; </script>";
 
     }
 } elseif(isset($_POST['action']) && $_POST['action']=="send_pins") {
     if($_POST['pin_balance']<$_POST['amount']) {
-        echo '<script>alert("You do not have enough pins.")</script>';
+         $_SESSION['error'] = "You do not have enough pins.";
+        // echo '<script>alert("You do not have enough pins.")</script>';
         echo "<script> location.href='send_pins.php'; </script>";
     } else {
         $reduce_pin_value = $_POST['pin_balance']-$_POST['amount'];
@@ -119,7 +124,8 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
         $balance = $add_pin_value;
         $query = $db->prepare("INSERT INTO TRANSACTIONAL_DETAIL (`USER_ID`, `AMOUNT`, `CREATED_DATE`, `PERCENTAGE`, `STATUS`, `details`, `balance`, `type`, `Level`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $query->execute([$user_id, $_POST['amount'], $created_at, 0, $status, $details, $balance, $type, NULL]);
-        echo '<script>alert("Pin send Successful.")</script>';
+         $_SESSION['success'] = "Pin send Successful.";
+        // echo '<script>alert("Pin send Successful.")</script>';
         echo "<script> location.href='send_pins.php'; </script>";
 
     }
@@ -133,7 +139,8 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
     $max_gold_value = $wallet['WALLET_BALANCE']/$gold['gold_price'];
     $max_gold_value = floor($max_gold_value);
     if($_POST['gold_value']>$max_gold_value) {
-        echo '<script>alert("You do not have enough balance.")</script>';
+         $_SESSION['error'] = "You do not have enough balance.";
+        // echo '<script>alert("You do not have enough balance.")</script>';
         echo "<script> location.href='redeem-gold.php'; </script>";
     } else {
         $amount = $_POST['gold_value']*$gold['gold_price'];
@@ -153,7 +160,8 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
         $query = $db->prepare("INSERT INTO `REDEEM HISTORY`(`USER_ID`, `CREATED_ID`, `REDEEMED_VALUE`, `REDEEMED_DATE`, `REDEEMED_STATUS`) VALUES (?, ?, ?, ?, ?)");
         $created_id = $db->lastInsertId();
         $query->execute([$user_id, $created_id, $_POST['gold_value'], $created_at, 0]);
-        echo '<script>alert("Redeem Gold Successful.")</script>';
+         $_SESSION['success'] = "Redeem Gold Successful.";
+        // echo '<script>alert("Redeem Gold Successful.")</script>';
         echo "<script> location.href='redeem-gold.php'; </script>";
     }
 } elseif(isset($_POST['action']) && $_POST['action']=="ewallet_to_pins") {
@@ -161,7 +169,8 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
     $wallet->execute([$user['user_id']]);
     $wallet = $wallet->fetch();
     if($_POST['amount']>$wallet['WALLET_BALANCE']) {
-        echo '<script>alert("You do not have enough balance.")</script>';
+        $_SESSION['success'] = "You do not have enough balance.";
+        // echo '<script>alert("You do not have enough balance.")</script>';
         echo "<script> location.href='send_ewallet_to_pins.php'; </script>";
     } else {
         $user_id = $user['user_id'];
@@ -177,7 +186,8 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
         $details = "Convert Ewallet ".$_POST['amount']." to PV with fee 0";
         $query = $db->prepare("INSERT INTO TRANSACTIONAL_DETAIL (`USER_ID`, `AMOUNT`, `CREATED_DATE`, `PERCENTAGE`, `STATUS`, `details`, `balance`, `type`, `Level`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $query->execute([$user_id, $_POST['amount'], $created_at, 0, $status, $details, $new_wallet_balance, $type, NULL]);
-        echo '<script>alert("Ewallet to Pins Convert Successful.")</script>';
+         $_SESSION['success'] = "Ewallet to Pins Convert Successful.";
+        // echo '<script>alert("Ewallet to Pins Convert Successful.")</script>';
         echo "<script> location.href='send_ewallet_to_pins.php'; </script>";
         
     }
@@ -196,7 +206,8 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
     $wallet->execute([$user['user_id']]);
     $wallet = $wallet->fetch();
     if($_POST['amount']>$wallet['WALLET_BALANCE']) {
-        echo '<script>alert("You do not have enough balance.")</script>';
+        $_SESSION['error'] ="You do not have enough balance.";
+        // echo '<script>alert("You do not have enough balance.")</script>';
         echo "<script> location.href='withdraw.php'; </script>";
     } else {
         $today = Date("Y-m-d H:i:s");
@@ -217,7 +228,8 @@ if(isset($_POST['action']) && $_POST['action']=="profile_update") {
         $trans_id = $db->lastInsertId();
         $query = $db->prepare("INSERT INTO WITHDRAWAL_HISTORY (`USER_ID`, `CREATED_DATE`, `WITHDRAWAL_AMOUNT`, `BANK_NAME`, `BANK_ACC_NUMBER`, `WITHDRAWAL_FEE`, `WITHDRAWAL_STATUS`, `Transaction_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         $query->execute([$user['user_id'], $today, $amount, $bank_name, $bank_acc_num, $fee, $status, $trans_id]);
-        echo '<script>alert("Withdraw request successful.")</script>';
+        // echo '<script>alert("Withdraw request successful.")</script>';
+         $_SESSION['success'] = "Withdraw request successful.";
         echo "<script> location.href='withdraw.php'; </script>";
     }
 }

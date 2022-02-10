@@ -44,6 +44,12 @@ if(isset($_SESSION['username'])) {
   <link id="color" rel="stylesheet" href="assets/css/color-1.css" media="screen">
   <!-- Responsive css-->
   <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+         <script src="assets/js/jquery-3.5.1.min.js"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></link>
+
 </head>
 
 <body>
@@ -99,6 +105,34 @@ if(isset($_SESSION['username'])) {
       <!-- login page end-->
     </div>
   </div>
+  <script>
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": true,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": true,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    }
+  </script>
+
+  <?php 
+    if(isset($_SESSION['error'])){
+      echo  '<script>toastr.error("'.$_SESSION['error'].'")</script>';
+      unset($_SESSION['error']);
+    }
+  ?>
+  
+
   <!-- latest jquery-->
   <script src="assets/js/jquery-3.5.1.min.js"></script>
   <!-- Bootstrap js-->
